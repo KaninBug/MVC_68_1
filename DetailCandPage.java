@@ -8,8 +8,8 @@ import Controller.Model.Candidate;
 
 public class DetailCandPage {
     private String idCand;
-    private ListCandidate listcand = new ListCandidate();
-    private ArrayList<Candidate> list = new ArrayList<>(listcand.getCandList());
+    private ListCandidate listCand = new ListCandidate();
+    private ArrayList<Candidate> list = new ArrayList<>(listCand.getCandList());
 
     JFrame main;
     JLabel h1;
@@ -43,16 +43,24 @@ public class DetailCandPage {
     }
 
     void detail() {
-        idCandLabel = new JLabel("ID Candidate : " + "");
-        nameCandLabel = new JLabel("Name : " + );
-        emailCandLabel = new JLabel("Email :");
-        idCandLabel.setBounds(100,250,200,20);
+        idCandLabel = new JLabel();
+        nameCandLabel = new JLabel();
+        emailCandLabel = new JLabel();
+        for(int i = 0; i < list.size(); i++) {
+            if(idCand.equals(list.get(i).getIdCand())) {
+                idCandLabel.setText("ID Candidate : + " + list.get(i).getIdCand());
+                nameCandLabel.setText("Name : " + list.get(i).getFnameCand() + " " + list.get(i).getLnameCand());
+                emailCandLabel.setText("Email : " + list.get(i).getEmailCand());
+            }
+        }
+        
+        idCandLabel.setBounds(100,250,1000,20);
         idCandLabel.setFont(new Font(null, Font.PLAIN, 20));
 
-        nameCandLabel.setBounds(100,300,200,20);
+        nameCandLabel.setBounds(100,300,1000,20);
         nameCandLabel.setFont(new Font(null, Font.PLAIN, 20));
 
-        emailCandLabel.setBounds(100,350,200,20);
+        emailCandLabel.setBounds(100,350,1000,20);
         emailCandLabel.setFont(new Font(null, Font.PLAIN, 20));
     }
 

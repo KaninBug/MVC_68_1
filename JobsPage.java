@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class JobsPage {
-        JFrame main;
+    JFrame main;
     JLabel h1;
     JLabel idCandLabel;
     JLabel nameCandLabel;
