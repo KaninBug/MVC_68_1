@@ -4,9 +4,7 @@ import javax.swing.*;
 public class JobsPage {
     JFrame main;
     JLabel h1;
-    JLabel idCandLabel;
-    JLabel nameCandLabel;
-    JLabel emailCandLabel;
+    JLabel idJobLabel;
 
     JobsPage() {
         main = new JFrame();
@@ -17,9 +15,7 @@ public class JobsPage {
         main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         main.add(h1);
-        main.add(idCandLabel);
-        main.add(nameCandLabel);
-        main.add(emailCandLabel);
+        main.add(idJobLabel);
     }
 
     void component() {
@@ -33,17 +29,9 @@ public class JobsPage {
     }
 
     void detail() {
-        idCandLabel = new JLabel("ID Candidate : " + "");
-        nameCandLabel = new JLabel("Name : ");
-        emailCandLabel = new JLabel("Email :");
-        idCandLabel.setBounds(100,250,200,20);
-        idCandLabel.setFont(new Font(null, Font.PLAIN, 20));
-
-        nameCandLabel.setBounds(100,300,200,20);
-        nameCandLabel.setFont(new Font(null, Font.PLAIN, 20));
-
-        emailCandLabel.setBounds(100,350,200,20);
-        emailCandLabel.setFont(new Font(null, Font.PLAIN, 20));
+        idJobLabel = new JLabel("ID Job : " + "");
+        idJobLabel.setBounds(100,250,200,20);
+        idJobLabel.setFont(new Font(null, Font.PLAIN, 20));
     }
 
     public static void main(String arge[]) {

@@ -1,8 +1,6 @@
 import java.awt.*;
 import java.util.ArrayList;
-
 import javax.swing.*;
-
 import Controller.ListCandidate;
 import Controller.Model.Candidate;
 
@@ -64,4 +62,7 @@ public class DetailCandPage {
         emailCandLabel.setFont(new Font(null, Font.PLAIN, 20));
     }
 
+    public static void main(String arge[]) {
+        DetailCandPage a = new DetailCandPage(null);
+    }
 }
